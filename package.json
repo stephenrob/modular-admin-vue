@@ -10,6 +10,8 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-alpha.4",
+    "font-awesome": "^4.7.0",
     "modular-admin-scss": "github:stephenrob/modular-admin-scss",
     "vue": "^2.0.1"
   },
