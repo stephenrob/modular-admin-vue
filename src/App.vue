@@ -69,8 +69,23 @@
           ></ModularAdminSidebarNavItem>
 
       </ModularAdminSidebarNav>
-      <ModularAdminSiderbarFooter></ModularAdminSiderbarFooter>
+      <ModularAdminSidebarFooter></ModularAdminSidebarFooter>
     </ModularAdminSidebar>
+
+    <ModularAdminFooter>
+      <ModularAdminFooterButtons>
+        <ModularAdminFooterButton icon="fa-github" link="https://github.com/lulibrary"></ModularAdminFooterButton>
+        <ModularAdminFooterButton icon="fa-twitter" link="https://twitter.com/lancasterunilib"></ModularAdminFooterButton>
+      </ModularAdminFooterButtons>
+      <ModularAdminFooterAbout>
+        <ModularAdminFooterAboutItem>
+          Another thing in the footer
+        </ModularAdminFooterAboutItem>
+        <ModularAdminFooterAboutItem>
+          Created with <i class="fa fa-heart"></i> by <a href="https://lancaster.ac.uk/library">Lancaster University Library</a>
+        </ModularAdminFooterAboutItem>
+      </ModularAdminFooterAbout>
+    </ModularAdminFooter>
     
   </ModularAdminApp>
 
@@ -91,6 +106,11 @@ import ModularAdminSidebarNav from './components/modular-admin/sidebar/nav/Sideb
 import ModularAdminSidebarNavDropdown from './components/modular-admin/sidebar/nav/SidebarNavDropdown'
 import ModularAdminSidebarNavItem from './components/modular-admin/sidebar/nav/SidebarNavItem'
 import ModularAdminSidebarFooter from './components/modular-admin/sidebar/SidebarFooter'
+import ModularAdminFooter from './components/modular-admin/footer/AppFooter'
+import ModularAdminFooterButtons from './components/modular-admin/footer/FooterButtons'
+import ModularAdminFooterButton from './components/modular-admin/footer/FooterButton'
+import ModularAdminFooterAbout from './components/modular-admin/footer/FooterAbout'
+import ModularAdminFooterAboutItem from './components/modular-admin/footer/FooterAboutItem'
 
 export default {
   name: 'app',
@@ -108,7 +128,12 @@ export default {
     ModularAdminSidebarNav,
     ModularAdminSidebarNavDropdown,
     ModularAdminSidebarNavItem,
-    ModularAdminSidebarFooter
+    ModularAdminSidebarFooter,
+    ModularAdminFooter,
+    ModularAdminFooterButtons,
+    ModularAdminFooterButton,
+    ModularAdminFooterAbout,
+    ModularAdminFooterAboutItem
   }
 }
 </script>
