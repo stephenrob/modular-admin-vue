@@ -1,0 +1,43 @@
+$fa-font-path: '~font-awesome/fonts/';
+
+@import '~bootstrap/scss/bootstrap';
+@import '~font-awesome/scss/font-awesome';
+
+@import '~modular-admin-scss/scss/main';
+
+@import '~modular-admin-scss/scss/_common/alert/alert';
+@import '~modular-admin-scss/scss/_common/animations/animations';
+@import '~modular-admin-scss/scss/_common/button/button';
+@import '~modular-admin-scss/scss/_common/card/card';
+@import '~modular-admin-scss/scss/_common/chart/chart';
+@import '~modular-admin-scss/scss/_common/dropdown/dropdown';
+@import '~modular-admin-scss/scss/_common/flex/flex';
+@import '~modular-admin-scss/scss/_common/form/form';
+@import '~modular-admin-scss/scss/_common/images-container/images-container';
+@import '~modular-admin-scss/scss/_common/items-list/items-list';
+@import '~modular-admin-scss/scss/_common/logo/logo';
+@import '~modular-admin-scss/scss/_common/modal/modal-tabs';
+@import '~modular-admin-scss/scss/_common/navigation/navigation';
+@import '~modular-admin-scss/scss/_common/nprogress/nprogress';
+@import '~modular-admin-scss/scss/_common/pagination/pagination';
+@import '~modular-admin-scss/scss/_common/scrollbar/scrollbar';
+@import '~modular-admin-scss/scss/_common/table/table';
+
+@import '~modular-admin-scss/scss/_common/_styles/layout';
+@import '~modular-admin-scss/scss/_common/_styles/misc';
+@import '~modular-admin-scss/scss/_common/_styles/typography';
+
+@import '~modular-admin-scss/scss/app/app';
+
+@import '~modular-admin-scss/scss/app/_common/header/header';
+@import '~modular-admin-scss/scss/app/_common/header/buttons/buttons';
+@import '~modular-admin-scss/scss/app/_common/header/collapse/collapse';
+@import '~modular-admin-scss/scss/app/_common/header/nav/nav';
+@import '~modular-admin-scss/scss/app/_common/header/nav/notifications/notifications';
+@import '~modular-admin-scss/scss/app/_common/header/nav/profile/profile';
+@import '~modular-admin-scss/scss/app/_common/header/search/search';
+
+@import '~modular-admin-scss/scss/app/_common/sidebar/sidebar';
+@import '~modular-admin-scss/scss/app/_common/sidebar/header/header';
+
+@import '~modular-admin-scss/scss/app/_common/footer/footer'
