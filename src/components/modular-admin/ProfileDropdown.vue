@@ -13,7 +13,10 @@
       <div class="img" v-bind:style="{ backgroundImage: 'url(' + profilePictureURL + ')' }"> </div>
       <span class="name" v-html="name"></span>
     </a>
-    <slot> </slot>
+
+    <div class="dropdown-meny profile-dropdown-menu" aria-labelledby="dropdownMenu1">
+      <slot></slot>
+    </div>
   </li>
 
 </template>
