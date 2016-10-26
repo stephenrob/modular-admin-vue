@@ -14,7 +14,7 @@
       <span class="name" v-html="name"></span>
     </a>
 
-    <div class="dropdown-meny profile-dropdown-menu" aria-labelledby="dropdownMenu1">
+    <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
       <slot></slot>
     </div>
   </li>
