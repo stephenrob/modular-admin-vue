@@ -10,6 +10,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "modular-admin-scss": "github:stephenrob/modular-admin-scss",
     "vue": "^2.0.1"
   },
   "devDependencies": {
