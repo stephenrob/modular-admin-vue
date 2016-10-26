@@ -6,6 +6,6 @@
 
 <script>
   export default {
-    name: 'modular-admin-header-bar'
+    name: 'modular-admin-app-header'
   }
 </script>
