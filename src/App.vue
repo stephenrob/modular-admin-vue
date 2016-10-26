@@ -1,171 +1,171 @@
 <template>
 
-  <ModularAdminApp
+  <maApp
     :fixedSidebar="true"
     :fixedFooter="true"
   >
-    <ModularAdminAppHeader>
-      <ModularAdminAppHeaderHideSidebar></ModularAdminAppHeaderHideSidebar>
-      <ModularAdminHeaderSearch></ModularAdminHeaderSearch>
-      <ModularAdminHeaderNav>
+    <maAppHeader>
+      <maAppHeaderHideSidebar></maAppHeaderHideSidebar>
+      <maHeaderSearch></maHeaderSearch>
+      <maHeaderNav>
 
-        <ModularAdminNotificationsDropdown
+        <maNotificationsDropdown
           notificationIcon="fa-bell-o"
           numberOfNotifications=10
           allNotificationsLink="#allNotifications"
         >
-          <ModularAdminNotificationItem
+          <maNotificationItem
             imageURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"
             content='<p> <span class="accent">Zack Alien</span> pushed new commit: <span class="accent">Fix page load performance issue</span>. </p>'
             notificationLink="#"
           >
-          </ModularAdminNotificationItem>
+          </maNotificationItem>
 
-          <ModularAdminNotificationItem
+          <maNotificationItem
             imageURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"
             content='<p> <span class="accent">Andy Nouman</span> deployed new version of <span class="accent">NodeJS REST Api V3</span> </p>'
             notificationLink="#"
           >
-          </ModularAdminNotificationItem>
+          </maNotificationItem>
 
-          <ModularAdminNotificationItem
+          <maNotificationItem
             imageURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"
             content='<p> <span class="accent">Amaya Hatsumi</span> started new task: <span class="accent">Dashboard UI design.</span>. </p>'
             notificationLink="#"
           >
-          </ModularAdminNotificationItem>
-        </ModularAdminNotificationsDropdown>
+          </maNotificationItem>
+        </maNotificationsDropdown>
 
-        <ModularAdminProfileDropdown
+        <maProfileDropdown
           name=" John Doe"
           profilePictureURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"
           :caret="true"
         >
-          <ModularAdminDropdownItem
+          <maDropdownItem
             link="#dropdownItem1"
             icon="fa-user"
             text="Profile"
-          ></ModularAdminDropdownItem>
-          <ModularAdminDropdownItem
+          ></maDropdownItem>
+          <maDropdownItem
             link="#dropdownItem2"
             icon="fa-bell"
             text="Notifications"
-          ></ModularAdminDropdownItem>
-          <ModularAdminDropdownItem
+          ></maDropdownItem>
+          <maDropdownItem
             link="#dropdownItem3"
             icon="fa-gear"
             text="Settings"
-          ></ModularAdminDropdownItem>
-          <ModularAdminDropdownDivider></ModularAdminDropdownDivider>
-          <ModularAdminDropdownItem
+          ></maDropdownItem>
+          <maDropdownDivider></maDropdownDivider>
+          <maDropdownItem
             link="#dropdownItem4"
             icon="fa-power-off"
             text="Logout"
-          ></ModularAdminDropdownItem>
-        </ModularAdminProfileDropdown>
-      </ModularAdminHeaderNav>
-    </ModularAdminAppHeader>
+          ></maDropdownItem>
+        </maProfileDropdown>
+      </maHeaderNav>
+    </maAppHeader>
 
-    <ModularAdminSidebar>
-      <ModularAdminSidebarHeader appName="Modular Admin"></ModularAdminSidebarHeader>
-      <ModularAdminSidebarNav>
+    <maSidebar>
+      <maSidebarHeader appName="Modular Admin"></maSidebarHeader>
+      <maSidebarNav>
 
-        <ModularAdminSidebarNavItem
+        <maSidebarNavItem
             icon='fa-home'
             link='#'
             itemText='Dashboard'
           >
-          </ModularAdminSidebarNavItem>
-          <ModularAdminSidebarNavDropdown
+          </maSidebarNavItem>
+          <maSidebarNavDropdown
             icon="fa-th-large"
             itemText="Items Manager"
           >
-            <ModularAdminSidebarNavItem
+            <maSidebarNavItem
               link='#itemslist'
               itemText='Items List'
-            ></ModularAdminSidebarNavItem>
-            <ModularAdminSidebarNavItem
+            ></maSidebarNavItem>
+            <maSidebarNavItem
               :active="true"
               link='#itemseditor'
               itemText='Item Editor'
-            ></ModularAdminSidebarNavItem>
-          </ModularAdminSidebarNavDropdown>
-          <ModularAdminSidebarNavItem
+            ></maSidebarNavItem>
+          </maSidebarNavDropdown>
+          <maSidebarNavItem
             icon='fa-home'
             link='#'
             itemText='Testing'
-          ></ModularAdminSidebarNavItem>
+          ></maSidebarNavItem>
 
-      </ModularAdminSidebarNav>
-      <ModularAdminSidebarFooter></ModularAdminSidebarFooter>
-    </ModularAdminSidebar>
+      </maSidebarNav>
+      <maSidebarFooter></maSidebarFooter>
+    </maSidebar>
 
-    <ModularAdminFooter>
-      <ModularAdminFooterButtons>
-        <ModularAdminFooterButton icon="fa-github" link="https://github.com/lulibrary"></ModularAdminFooterButton>
-        <ModularAdminFooterButton icon="fa-twitter" link="https://twitter.com/lancasterunilib"></ModularAdminFooterButton>
-      </ModularAdminFooterButtons>
-      <ModularAdminFooterAbout>
-        <ModularAdminFooterAboutItem>
+    <maFooter>
+      <maFooterButtons>
+        <maFooterButton icon="fa-github" link="https://github.com/lulibrary"></maFooterButton>
+        <maFooterButton icon="fa-twitter" link="https://twitter.com/lancasterunilib"></maFooterButton>
+      </maFooterButtons>
+      <maFooterAbout>
+        <maFooterAboutItem>
           Another thing in the footer
-        </ModularAdminFooterAboutItem>
-        <ModularAdminFooterAboutItem>
+        </maFooterAboutItem>
+        <maFooterAboutItem>
           Created with <i class="fa fa-heart"></i> by <a href="https://lancaster.ac.uk/library">Lancaster University Library</a>
-        </ModularAdminFooterAboutItem>
-      </ModularAdminFooterAbout>
-    </ModularAdminFooter>
+        </maFooterAboutItem>
+      </maFooterAbout>
+    </maFooter>
     
-  </ModularAdminApp>
+  </maApp>
 
 </template>
 
 <script>
-import ModularAdminApp from './components/modular-admin/App'
-import ModularAdminAppHeader from './components/modular-admin/header/AppHeader'
-import ModularAdminAppHeaderHideSidebar from './components/modular-admin/header/HeaderHideSidebar'
-import ModularAdminHeaderSearch from './components/modular-admin/header/HeaderSearch'
-import ModularAdminHeaderNav from './components/modular-admin/header/HeaderNav'
-import ModularAdminNotificationsDropdown from './components/modular-admin/header/notifications/NotificationsDropdown'
-import ModularAdminNotificationItem from './components/modular-admin/header/notifications/NotificationItem'
-import ModularAdminProfileDropdown from './components/modular-admin/header/profile-dropdown/ProfileDropdown'
-import ModularAdminDropdownItem from './components/modular-admin/dropdown/DropdownItem'
-import ModularAdminDropdownDivider from './components/modular-admin/dropdown/DropdownDivider'
-import ModularAdminSidebar from './components/modular-admin/sidebar/Sidebar'
-import ModularAdminSidebarHeader from './components/modular-admin/sidebar/SidebarHeader'
-import ModularAdminSidebarNav from './components/modular-admin/sidebar/nav/SidebarNav'
-import ModularAdminSidebarNavDropdown from './components/modular-admin/sidebar/nav/SidebarNavDropdown'
-import ModularAdminSidebarNavItem from './components/modular-admin/sidebar/nav/SidebarNavItem'
-import ModularAdminSidebarFooter from './components/modular-admin/sidebar/SidebarFooter'
-import ModularAdminFooter from './components/modular-admin/footer/AppFooter'
-import ModularAdminFooterButtons from './components/modular-admin/footer/FooterButtons'
-import ModularAdminFooterButton from './components/modular-admin/footer/FooterButton'
-import ModularAdminFooterAbout from './components/modular-admin/footer/FooterAbout'
-import ModularAdminFooterAboutItem from './components/modular-admin/footer/FooterAboutItem'
+import maApp from './components/modular-admin/App'
+import maAppHeader from './components/modular-admin/header/AppHeader'
+import maAppHeaderHideSidebar from './components/modular-admin/header/HeaderHideSidebar'
+import maHeaderSearch from './components/modular-admin/header/HeaderSearch'
+import maHeaderNav from './components/modular-admin/header/HeaderNav'
+import maNotificationsDropdown from './components/modular-admin/header/notifications/NotificationsDropdown'
+import maNotificationItem from './components/modular-admin/header/notifications/NotificationItem'
+import maProfileDropdown from './components/modular-admin/header/profile-dropdown/ProfileDropdown'
+import maDropdownItem from './components/modular-admin/dropdown/DropdownItem'
+import maDropdownDivider from './components/modular-admin/dropdown/DropdownDivider'
+import maSidebar from './components/modular-admin/sidebar/Sidebar'
+import maSidebarHeader from './components/modular-admin/sidebar/SidebarHeader'
+import maSidebarNav from './components/modular-admin/sidebar/nav/SidebarNav'
+import maSidebarNavDropdown from './components/modular-admin/sidebar/nav/SidebarNavDropdown'
+import maSidebarNavItem from './components/modular-admin/sidebar/nav/SidebarNavItem'
+import maSidebarFooter from './components/modular-admin/sidebar/SidebarFooter'
+import maFooter from './components/modular-admin/footer/AppFooter'
+import maFooterButtons from './components/modular-admin/footer/FooterButtons'
+import maFooterButton from './components/modular-admin/footer/FooterButton'
+import maFooterAbout from './components/modular-admin/footer/FooterAbout'
+import maFooterAboutItem from './components/modular-admin/footer/FooterAboutItem'
 
 export default {
   name: 'app',
   components: {
-    ModularAdminApp,
-    ModularAdminAppHeader,
-    ModularAdminHeaderSearch,
-    ModularAdminAppHeaderHideSidebar,
-    ModularAdminHeaderNav,
-    ModularAdminNotificationsDropdown,
-    ModularAdminNotificationItem,
-    ModularAdminProfileDropdown,
-    ModularAdminDropdownItem,
-    ModularAdminDropdownDivider,
-    ModularAdminSidebar,
-    ModularAdminSidebarHeader,
-    ModularAdminSidebarNav,
-    ModularAdminSidebarNavDropdown,
-    ModularAdminSidebarNavItem,
-    ModularAdminSidebarFooter,
-    ModularAdminFooter,
-    ModularAdminFooterButtons,
-    ModularAdminFooterButton,
-    ModularAdminFooterAbout,
-    ModularAdminFooterAboutItem
+    maApp,
+    maAppHeader,
+    maHeaderSearch,
+    maAppHeaderHideSidebar,
+    maHeaderNav,
+    maNotificationsDropdown,
+    maNotificationItem,
+    maProfileDropdown,
+    maDropdownItem,
+    maDropdownDivider,
+    maSidebar,
+    maSidebarHeader,
+    maSidebarNav,
+    maSidebarNavDropdown,
+    maSidebarNavItem,
+    maSidebarFooter,
+    maFooter,
+    maFooterButtons,
+    maFooterButton,
+    maFooterAbout,
+    maFooterAboutItem
   }
 }
 </script>
