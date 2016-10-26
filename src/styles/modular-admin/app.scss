@@ -28,3 +28,11 @@ $fa-font-path: '~font-awesome/fonts/';
 @import '~modular-admin-scss/scss/_common/_styles/typography';
 
 @import '~modular-admin-scss/scss/app/app';
+
+@import '~modular-admin-scss/scss/app/_common/header/header';
+@import '~modular-admin-scss/scss/app/_common/header/buttons/buttons';
+@import '~modular-admin-scss/scss/app/_common/header/collapse/collapse';
+@import '~modular-admin-scss/scss/app/_common/header/nav/nav';
+@import '~modular-admin-scss/scss/app/_common/header/nav/notifications/notifications';
+@import '~modular-admin-scss/scss/app/_common/header/nav/profile/profile';
+@import '~modular-admin-scss/scss/app/_common/header/search/search';
