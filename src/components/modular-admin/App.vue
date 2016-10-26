@@ -22,6 +22,7 @@
     methods: {
       closeDropdowns () {
         this.$root.$emit('hide::notificationsdropdown')
+        this.$root.$emit('hide::profiledropdown')
       }
     }
   }
