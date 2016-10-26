@@ -8,6 +8,34 @@
       <ModularAdminAppHeaderHideSidebar></ModularAdminAppHeaderHideSidebar>
       <ModularAdminHeaderSearch></ModularAdminHeaderSearch>
       <ModularAdminHeaderNav>
+
+        <ModularAdminNotificationsDropdown
+          notificationIcon="fa-bell-o"
+          numberOfNotifications=10
+          allNotificationsLink="#allNotifications"
+        >
+          <ModularAdminNotificationItem
+            imageURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"
+            content='<p> <span class="accent">Zack Alien</span> pushed new commit: <span class="accent">Fix page load performance issue</span>. </p>'
+            notificationLink="#"
+          >
+          </ModularAdminNotificationItem>
+
+          <ModularAdminNotificationItem
+            imageURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"
+            content='<p> <span class="accent">Andy Nouman</span> deployed new version of <span class="accent">NodeJS REST Api V3</span> </p>'
+            notificationLink="#"
+          >
+          </ModularAdminNotificationItem>
+
+          <ModularAdminNotificationItem
+            imageURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"
+            content='<p> <span class="accent">Amaya Hatsumi</span> started new task: <span class="accent">Dashboard UI design.</span>. </p>'
+            notificationLink="#"
+          >
+          </ModularAdminNotificationItem>
+        </ModularAdminNotificationsDropdown>
+
         <ModularAdminProfileDropdown
           name=" John Doe"
           profilePictureURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"
@@ -97,6 +125,8 @@ import ModularAdminAppHeader from './components/modular-admin/header/AppHeader'
 import ModularAdminAppHeaderHideSidebar from './components/modular-admin/header/HeaderHideSidebar'
 import ModularAdminHeaderSearch from './components/modular-admin/header/HeaderSearch'
 import ModularAdminHeaderNav from './components/modular-admin/header/HeaderNav'
+import ModularAdminNotificationsDropdown from './components/modular-admin/header/notifications/NotificationsDropdown'
+import ModularAdminNotificationItem from './components/modular-admin/header/notifications/NotificationItem'
 import ModularAdminProfileDropdown from './components/modular-admin/header/profile-dropdown/ProfileDropdown'
 import ModularAdminDropdownItem from './components/modular-admin/dropdown/DropdownItem'
 import ModularAdminDropdownDivider from './components/modular-admin/dropdown/DropdownDivider'
@@ -120,6 +150,8 @@ export default {
     ModularAdminHeaderSearch,
     ModularAdminAppHeaderHideSidebar,
     ModularAdminHeaderNav,
+    ModularAdminNotificationsDropdown,
+    ModularAdminNotificationItem,
     ModularAdminProfileDropdown,
     ModularAdminDropdownItem,
     ModularAdminDropdownDivider,
