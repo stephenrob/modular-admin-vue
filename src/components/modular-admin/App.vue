@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrapper">
+  <div class="main-wrapper" v-on:click="closeDropdowns">
     <div class="app" :class="{'sidebar-fixed': fixedSidebar, 'footer-fixed': fixedFooter}">
       <slot></slot>
     </div>
@@ -17,6 +17,11 @@
       fixedFooter: {
         type: Boolean,
         default: false
+      }
+    },
+    methods: {
+      closeDropdowns () {
+        this.$root.$emit('hide::notificationsdropdown')
       }
     }
   }
