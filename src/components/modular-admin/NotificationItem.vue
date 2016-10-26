@@ -13,6 +13,7 @@
 
 <script>
   export default {
+    name: 'modular-admin-notifications-item',
     replace: true,
     props: {
       imageURL: {

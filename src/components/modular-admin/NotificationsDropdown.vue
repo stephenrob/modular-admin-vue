@@ -25,6 +25,7 @@
 
 <script>
   export default {
+    name: 'modular-admin-notifications-dropdown',
     replace: true,
     data () {
       return {
