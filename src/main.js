@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 
-import './styles/modular-admin/app.scss'
+import './styles/modular-admin.scss'
 
 /* eslint-disable no-new */
 new Vue({

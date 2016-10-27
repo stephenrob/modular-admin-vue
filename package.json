@@ -1,14 +1,29 @@
 {
   "name": "modular-admin-vue",
-  "version": "1.0.0",
-  "description": "Modular admin Vue.js template",
+  "version": "0.1.0",
+  "description": "Modular admin Vue.js components",
   "author": "Stephen Robinson <stephenrob@users.noreply.github.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
+    "deploy": "cd build && ./deploy.sh",
     "lint": "eslint --ext .js,.vue src"
   },
+  "main": "dist/modularadmin.common.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenrob/modular-admin-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stephenrob/modular-admin-vue/issues"
+  },
+  "homepage": "https://github.com/stephenrob/modular-admin-vue",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.4",
     "font-awesome": "^4.7.0",
@@ -41,6 +56,7 @@
     "html-webpack-plugin": "^2.8.1",
     "http-proxy-middleware": "^0.17.2",
     "json-loader": "^0.5.4",
+    "lodash-webpack-plugin": "^0.10.2",
     "node-sass": "^3.10.1",
     "opn": "^4.0.2",
     "ora": "^0.3.0",
