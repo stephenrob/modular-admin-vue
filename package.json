@@ -10,7 +10,7 @@
     "deploy": "cd build && ./deploy.sh",
     "lint": "eslint --ext .js,.vue src"
   },
-  "main": "dist/modularadmin.common.js",
+  "main": "dist/maVue.common.js",
   "files": [
     "dist",
     "src"
