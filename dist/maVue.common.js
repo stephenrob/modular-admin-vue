@@ -1,5 +1,5 @@
 /*!
- * maVue v0.1.0 (https://github.com/stephenrob/modular-admin-vue)
+ * maVue v0.2.1 (https://github.com/stephenrob/modular-admin-vue)
  * (c) 2016 Stephen Robinson
  * Released under the MIT License.
  */
@@ -534,7 +534,6 @@ module.exports =
 	      this.show = !this.show;
 	      if (this.show) {
 	        this.$root.$emit('shown::notificationsdropdown');
-	        e.stopPropagation();
 	      } else {
 	        this.$root.$emit('hidden::notificationsdropdown');
 	      }
@@ -599,7 +598,6 @@ module.exports =
 	      this.show = !this.show;
 	      if (this.show) {
 	        this.$root.$emit('shown::profiledropdown');
-	        e.stopPropagation();
 	      } else {
 	        this.$root.$emit('hidden::profiledropdown');
 	      }
@@ -708,9 +706,6 @@ module.exports =
 	  methods: {
 	    toggle: function toggle(e) {
 	      this.show = !this.show;
-	      if (this.show) {
-	        e.stopPropagation();
-	      }
 	    }
 	  },
 	  created: function created() {
@@ -1849,7 +1844,9 @@ module.exports =
 	    },
 	    on: {
 	      "click": function($event) {
-	        toggle($event)
+	        $event.stopPropagation();
+	        $event.preventDefault();
+	        toggle(e)
 	      }
 	    }
 	  }, [_h('i', {
@@ -2027,7 +2024,9 @@ module.exports =
 	    },
 	    on: {
 	      "click": function($event) {
-	        toggle($event)
+	        $event.stopPropagation();
+	        $event.preventDefault();
+	        toggle(e)
 	      }
 	    }
 	  }, [_h('div', {
@@ -2073,7 +2072,9 @@ module.exports =
 	    },
 	    on: {
 	      "click": function($event) {
-	        toggle($event)
+	        $event.stopPropagation();
+	        $event.preventDefault();
+	        toggle(e)
 	      }
 	    }
 	  }, [_h('i', {
