@@ -1,0 +1,222 @@
+$fa-font-path: '~font-awesome/fonts/';
+
+@import '~bootstrap/scss/bootstrap';
+@import '~font-awesome/scss/font-awesome';
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600);
+
+@import '~modular-admin-scss/scss/variables';
+
+$color-primary: #B5121B;
+$color-primary-light: lighten($color-primary, 10%) !default; 
+$color-primary-lighter: lighten($color-primary-light, 6%) !default; 
+$color-primary-dark: darken($color-primary, 10%) !default;
+$color-primary-darker: darken($color-primary-dark, 6%) !default;
+
+$link-color: #555656;
+$link-transition: initial;
+$link-decoration: underline;
+
+$link-hover-color: #b5121b;
+$link-hover-decoration: underline;
+
+$chart-color-primary: #c26763;
+$chart-color-secondary: #ccc;
+
+$sidebar-color-primary: #324147;
+$sidebar-color-secondary: darken($sidebar-color-primary, 6%);
+
+$footer-color-primary: #324147;
+
+$color-divider: #bec0c2;
+$color-bg: #ffffff;
+
+$color-text: darken(#324147, 5%);
+$color-text-light: lighten($color-text, 20%);
+
+$color-text-muted: #bec0c2;
+$color-text-inverse: #ffffff !default;
+$color-text-passive: #bec0c2 !default;
+
+$color-success: #869978 !default;
+$color-info: #7faabe !default;
+$color-warning: #e3cb8b !default;
+$color-danger: #c26763 !default;
+$color-inverse: #324147 !default;
+
+$dropdown-color-border: fade-out($link-color, 0.9) !default;
+$dropbown-color-border: lighten($color-divider, 12%);
+$dropdown-link-hover-color-bg: lighten($color-divider, 5%);
+
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~modular-admin-scss/scss/_common/_styles/mixins';
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	min-height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	color: $color-text;
+	overflow-x: hidden;
+}
+
+.main-wrapper {
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#ref {
+	.color-primary {
+		color: $color-primary;
+	}
+
+	.chart {
+		.color-primary {
+			color: $chart-color-primary;
+		}
+		.color-secondary {
+			color: $chart-color-secondary;
+		}
+	}
+}
+
+@import '~modular-admin-scss/scss/_common/alert/alert';
+@import '~modular-admin-scss/scss/_common/animations/animations';
+@import '~modular-admin-scss/scss/_common/button/button';
+@import '~modular-admin-scss/scss/_common/card/card';
+@import '~modular-admin-scss/scss/_common/chart/chart';
+
+.dropdown-menu {
+	float: left;
+	box-shadow: 2px 3px 6px $dropdown-color-border;
+	border: 1px solid $dropdown-color-border;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+  background-color: lighten($color-divider, 20%);
+
+
+	.dropdown-item {
+		display: block;
+		padding: 0px 15px;
+		clear: both;
+		font-weight: normal;
+		color: $color-text;
+		white-space: nowrap;
+		transition: none;
+
+		i {
+			margin-right: 2px;
+		}
+
+		&:hover {
+			color: lighten($link-color, 15%) !important;
+			background: none;
+			background-color: darken(#fff, 4%);
+		}
+	}
+}
+
+@import '~modular-admin-scss/scss/_common/flex/flex';
+@import '~modular-admin-scss/scss/_common/form/form';
+@import '~modular-admin-scss/scss/_common/images-container/images-container';
+@import '~modular-admin-scss/scss/_common/items-list/items-list';
+@import '~modular-admin-scss/scss/_common/logo/logo';
+@import '~modular-admin-scss/scss/_common/modal/modal-tabs';
+@import '~modular-admin-scss/scss/_common/navigation/navigation';
+@import '~modular-admin-scss/scss/_common/nprogress/nprogress';
+@import '~modular-admin-scss/scss/_common/pagination/pagination';
+@import '~modular-admin-scss/scss/_common/scrollbar/scrollbar';
+@import '~modular-admin-scss/scss/_common/table/table';
+
+@import '~modular-admin-scss/scss/_common/_styles/layout';
+@import '~modular-admin-scss/scss/_common/_styles/misc';
+@import '~modular-admin-scss/scss/_common/_styles/typography';
+
+@import '~modular-admin-scss/scss/app/app';
+
+@import '~modular-admin-scss/scss/app/_common/header/header';
+@import '~modular-admin-scss/scss/app/_common/header/buttons/buttons';
+@import '~modular-admin-scss/scss/app/_common/header/collapse/collapse';
+@import '~modular-admin-scss/scss/app/_common/header/nav/nav';
+@import '~modular-admin-scss/scss/app/_common/header/nav/notifications/notifications';
+@import '~modular-admin-scss/scss/app/_common/header/nav/profile/profile';
+@import '~modular-admin-scss/scss/app/_common/header/search/search';
+
+@import '~modular-admin-scss/scss/app/_common/sidebar/sidebar';
+@import '~modular-admin-scss/scss/app/_common/sidebar/header/header';
+
+.footer {
+	background-color: lighten($color-divider, 18%);
+  color: $color-text-light;
+	position: absolute;
+	left: $sidebar-width;
+	right: 0;
+	bottom: 0;
+	height: $footer-height;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.footer-fixed & {
+		position: fixed;
+	}
+
+
+	.footer-block {
+		vertical-align: middle;
+		margin-left: 20px;
+		margin-right: 20px;
+		// line-height: 30px;
+	}
+
+	.footer-github-btn {
+		vertical-align: middle;
+	}
+
+	@include media-down(md) {
+		left: 0;
+	}
+
+	.author > ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+
+			&:after {
+				content: "|";
+			}
+
+			&:last-child:after {
+				content: "";
+			}
+
+
+			@include media-down(md) {
+				display: block;
+				text-align: right;
+
+				&:after {
+					content: "";
+				}
+			}
+		}
+
+		@include media-down(md) {
+			display: block;
+		}
+
+		@include media-down(sm) {
+			display: none;
+		}
+	}
+
+}
