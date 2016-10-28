@@ -1,7 +1,7 @@
 <template>
 
   <li class="notifications new" :class="{open: show}">
-    <a href="#" data-toggle="dropdown" @click="toggle($event)">
+    <a href="#" data-toggle="dropdown" v-on:click.stop.prevent="toggle(e)">
       <i :class="['fa', notificationIcon]"></i>
       <sup>
         <span class="counter">{{ numberOfNotifications }}</span>
@@ -55,7 +55,6 @@
         this.show = !this.show
         if (this.show) {
           this.$root.$emit('shown::notificationsdropdown')
-          e.stopPropagation()
         } else {
           this.$root.$emit('hidden::notificationsdropdown')
         }
