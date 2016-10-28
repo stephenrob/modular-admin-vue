@@ -28,7 +28,7 @@ $sidebar-color-secondary: darken($sidebar-color-primary, 6%);
 
 $footer-color-primary: #324147;
 
-$color-divider: #bec0c2;
+$color-divider: lighten(#bec0c2, 10%);
 $color-bg: #ffffff;
 
 $color-text: darken(#324147, 5%);
@@ -152,7 +152,7 @@ body {
 @import '~modular-admin-scss/scss/app/_common/sidebar/header/header';
 
 .footer {
-	background-color: lighten($color-divider, 18%);
+	background-color: lighten($color-divider, 6%);
   color: $color-text-light;
 	position: absolute;
 	left: $sidebar-width;
