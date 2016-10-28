@@ -8,7 +8,7 @@
       data-toggle="dropdown"
       aria-haspopup="true"
       :aria-expanded="[show]"
-      @click="toggle($event)"
+      v-on:click.stop.prevent="toggle(e)"
     >
       <div class="img" v-bind:style="{ backgroundImage: 'url(' + profilePictureURL + ')' }"> </div>
       <span class="name" v-html="name"></span>
@@ -62,7 +62,6 @@
         this.show = !this.show
         if (this.show) {
           this.$root.$emit('shown::profiledropdown')
-          e.stopPropagation()
         } else {
           this.$root.$emit('hidden::profiledropdown')
         }
