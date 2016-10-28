@@ -1,7 +1,7 @@
 <template>
 
 <li :class="{active: isActive, open: show}">
-  <a href="#" @click="toggle($event)">
+  <a href="#" v-on:click.stop.prevent="toggle(e)">
     <i class="fa" :class="[icon]"></i>
     {{ itemText }}
     <i class="fa arrow"></i>
@@ -40,9 +40,6 @@
     methods: {
       toggle (e) {
         this.show = !this.show
-        if (this.show) {
-          e.stopPropagation()
-        }
       }
     },
     created: function () {
