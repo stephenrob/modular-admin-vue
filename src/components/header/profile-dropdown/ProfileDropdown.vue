@@ -10,7 +10,7 @@
       :aria-expanded="[show]"
       v-on:click.stop.prevent="toggle(e)"
     >
-      <div class="img" v-bind:style="{ backgroundImage: 'url(' + profilePictureURL + ')' }"> </div>
+      <div class="img" v-bind:style="{ backgroundImage: 'url(' + profilePictureURL + ')' }" v-if="profilePictureURL"> </div>
       <span class="name" v-html="name"></span>
     </a>
 
