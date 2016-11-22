@@ -1,7 +1,7 @@
 <template>
 
   <li class="notifications new" :class="{open: show}">
-    <a href="#" data-toggle="dropdown" v-on:click.stop.prevent="toggle(e)">
+    <a href="#" data-toggle="dropdown" v-on:click.stop.prevent="toggle()">
       <i :class="['fa', notificationIcon]"></i>
       <sup>
         <span class="counter">{{ numberOfNotifications }}</span>
@@ -51,7 +51,7 @@
       }
     },
     methods: {
-      toggle (e) {
+      toggle () {
         this.show = !this.show
         if (this.show) {
           this.$root.$emit('shown::notificationsdropdown')
