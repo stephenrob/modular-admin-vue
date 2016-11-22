@@ -1,6 +1,6 @@
 {
   "name": "modular-admin-vue",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Modular admin Vue.js components",
   "author": "Stephen Robinson <stephenrob@users.noreply.github.com>",
   "private": true,

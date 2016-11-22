@@ -1,5 +1,5 @@
 /*!
- * maVue v0.3.0 (https://github.com/stephenrob/modular-admin-vue)
+ * maVue v0.3.1 (https://github.com/stephenrob/modular-admin-vue)
  * (c) 2016 Stephen Robinson
  * Released under the MIT License.
  */
@@ -444,7 +444,7 @@ module.exports =
 	  name: 'modular-admin-header-hide-sidebar',
 	  methods: {
 	    collapseSidebar: function collapseSidebar() {
-	      this.$root.emit('maVue::collapseSidebar');
+	      this.$root.$emit('maVue::collapseSidebar');
 	    }
 	  }
 	};
@@ -550,7 +550,7 @@ module.exports =
 	    }
 	  },
 	  methods: {
-	    toggle: function toggle(e) {
+	    toggle: function toggle() {
 	      this.show = !this.show;
 	      if (this.show) {
 	        this.$root.$emit('shown::notificationsdropdown');
@@ -614,7 +614,7 @@ module.exports =
 	    }
 	  },
 	  methods: {
-	    toggle: function toggle(e) {
+	    toggle: function toggle() {
 	      this.show = !this.show;
 	      if (this.show) {
 	        this.$root.$emit('shown::profiledropdown');
@@ -1811,7 +1811,11 @@ module.exports =
 	      "id": "sidebar-collapse-btn"
 	    },
 	    on: {
-	      "click": collapseSidebar
+	      "click": function($event) {
+	        $event.stopPropagation();
+	        $event.preventDefault();
+	        collapseSidebar($event)
+	      }
 	    }
 	  }, [_m(0)])])
 	}},staticRenderFns: [function (){with(this) {
@@ -1869,7 +1873,7 @@ module.exports =
 	      "click": function($event) {
 	        $event.stopPropagation();
 	        $event.preventDefault();
-	        toggle(e)
+	        toggle()
 	      }
 	    }
 	  }, [_h('i', {
@@ -2049,15 +2053,15 @@ module.exports =
 	      "click": function($event) {
 	        $event.stopPropagation();
 	        $event.preventDefault();
-	        toggle(e)
+	        toggle()
 	      }
 	    }
-	  }, [_h('div', {
+	  }, [(profilePictureURL) ? _h('div', {
 	    staticClass: "img",
 	    style: ({
 	      backgroundImage: 'url(' + profilePictureURL + ')'
 	    })
-	  }), " ", _h('span', {
+	  }) : _e(), " ", _h('span', {
 	    staticClass: "name",
 	    domProps: {
 	      "innerHTML": _s(name)
