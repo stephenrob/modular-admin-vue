@@ -1,5 +1,5 @@
 /*!
- * maVue v0.2.1 (https://github.com/stephenrob/modular-admin-vue)
+ * maVue v0.3.0 (https://github.com/stephenrob/modular-admin-vue)
  * (c) 2016 Stephen Robinson
  * Released under the MIT License.
  */
@@ -269,6 +269,12 @@ module.exports =
 	});
 	exports.default = {
 	  name: 'modular-admin-app',
+	  data: function data() {
+	    return {
+	      sidebarOpen: false
+	    };
+	  },
+
 	  props: {
 	    fixedSidebar: {
 	      type: Boolean,
@@ -280,10 +286,19 @@ module.exports =
 	    }
 	  },
 	  methods: {
-	    closeDropdowns: function closeDropdowns() {
+	    bodyClick: function bodyClick() {
 	      this.$root.$emit('hide::notificationsdropdown');
 	      this.$root.$emit('hide::profiledropdown');
+	      this.$root.$emit('maVue::hide::sidebar');
+	      this.sidebarOpen = !this.sidebarOpen;
 	    }
+	  },
+	  created: function created() {
+	    var _this = this;
+
+	    this.$root.$on('maVue::collapseSidebar', function () {
+	      _this.sidebarOpen = !_this.sidebarOpen;
+	    });
 	  }
 	};
 
@@ -426,7 +441,12 @@ module.exports =
 	  value: true
 	});
 	exports.default = {
-	  name: 'modular-admin-header-hide-sidebar'
+	  name: 'modular-admin-header-hide-sidebar',
+	  methods: {
+	    collapseSidebar: function collapseSidebar() {
+	      this.$root.emit('maVue::collapseSidebar');
+	    }
+	  }
 	};
 
 /***/ },
@@ -1783,18 +1803,21 @@ module.exports =
 /***/ function(module, exports) {
 
 	module.exports={render:function (){with(this) {
-	  return _m(0)
-	}},staticRenderFns: [function (){with(this) {
 	  return _h('div', {
 	    staticClass: "header-block header-block-collapse hidden-lg-up"
 	  }, [_h('button', {
 	    staticClass: "collapse-btn",
 	    attrs: {
 	      "id": "sidebar-collapse-btn"
+	    },
+	    on: {
+	      "click": collapseSidebar
 	    }
-	  }, [_h('i', {
+	  }, [_m(0)])])
+	}},staticRenderFns: [function (){with(this) {
+	  return _h('i', {
 	    staticClass: "fa fa-bars"
-	  })])])
+	  })
 	}}]}
 
 /***/ },
@@ -1817,12 +1840,12 @@ module.exports =
 	  return _h('div', {
 	    staticClass: "main-wrapper",
 	    on: {
-	      "click": closeDropdowns
+	      "click": bodyClick
 	    }
 	  }, [_h('div', {
 	    staticClass: "app",
 	    class: {
-	      'sidebar-fixed': fixedSidebar, 'footer-fixed': fixedFooter
+	      'sidebar-fixed': fixedSidebar, 'footer-fixed': fixedFooter, 'sidebar-open': sidebarOpen
 	    }
 	  }, [_t("default")])])
 	}},staticRenderFns: []}
