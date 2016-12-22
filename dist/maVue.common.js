@@ -1,5 +1,5 @@
 /*!
- * maVue v0.3.3 (https://github.com/stephenrob/modular-admin-vue)
+ * maVue v0.4.0 (https://github.com/stephenrob/modular-admin-vue)
  * (c) 2016 Stephen Robinson
  * Released under the MIT License.
  */
@@ -287,8 +287,8 @@ module.exports =
 	  },
 	  methods: {
 	    bodyClick: function bodyClick() {
-	      this.$root.$emit('hide::notificationsdropdown');
-	      this.$root.$emit('hide::profiledropdown');
+	      this.$root.$emit('maVue::hide::notificationsDropdown');
+	      this.$root.$emit('maVue::hide::profileDropdown');
 	      this.$root.$emit('maVue::hide::sidebar');
 	    }
 	  },
@@ -556,16 +556,24 @@ module.exports =
 	    toggle: function toggle() {
 	      this.show = !this.show;
 	      if (this.show) {
-	        this.$root.$emit('shown::notificationsdropdown');
+	        this.$root.$emit('maVue::shown::notificationsDropdown', this);
 	      } else {
-	        this.$root.$emit('hidden::notificationsdropdown');
+	        this.$root.$emit('maVue::hidden::notificationsDropdown');
 	      }
 	    }
 	  },
 	  created: function created() {
 	    var _this = this;
 
-	    this.$root.$on('hide::notificationsdropdown', function () {
+	    this.$root.$on('maVue::hide::notificationsDropdown', function () {
+	      _this.show = false;
+	    });
+	    this.$root.$on('maVue::shown::notificationsDropdown', function (element) {
+	      if (element !== _this) {
+	        _this.show = false;
+	      }
+	    });
+	    this.$root.$on('maVue::shown::profileDropdown', function () {
 	      _this.show = false;
 	    });
 	  }
@@ -620,16 +628,24 @@ module.exports =
 	    toggle: function toggle() {
 	      this.show = !this.show;
 	      if (this.show) {
-	        this.$root.$emit('shown::profiledropdown');
+	        this.$root.$emit('maVue::shown::profileDropdown', this);
 	      } else {
-	        this.$root.$emit('hidden::profiledropdown');
+	        this.$root.$emit('maVue::hidden::profileDropdown');
 	      }
 	    }
 	  },
 	  created: function created() {
 	    var _this = this;
 
-	    this.$root.$on('hide::profiledropdown', function () {
+	    this.$root.$on('maVue::hide::profileDropdown', function () {
+	      _this.show = false;
+	    });
+	    this.$root.$on('maVue::shown::profileDropdown', function (element) {
+	      if (element !== _this) {
+	        _this.show = false;
+	      }
+	    });
+	    this.$root.$on('maVue::shown::notificationsDropdown', function () {
 	      _this.show = false;
 	    });
 	  }
@@ -729,16 +745,15 @@ module.exports =
 	  methods: {
 	    toggle: function toggle() {
 	      this.show = !this.show;
+	    },
+	    childActive: function childActive() {
+	      this.isActive = true;
+	      this.show = true;
 	    }
 	  },
 	  created: function created() {
-	    var _this = this;
-
 	    this.isActive = this.active;
-	    this.$on('sidebaritem::active', function () {
-	      _this.isActive = true;
-	      _this.show = true;
-	    });
+	    this.$on('maVue::sidebarItem::active', this.childActive);
 	  }
 	};
 
@@ -779,7 +794,7 @@ module.exports =
 	  },
 	  created: function created() {
 	    if (this.active) {
-	      this.$parent.$emit('sidebaritem::active');
+	      this.$parent.$emit('maVue::sidebarItem::active');
 	    }
 	  }
 	};
