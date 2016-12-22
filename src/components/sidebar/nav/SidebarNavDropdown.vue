@@ -40,14 +40,15 @@
     methods: {
       toggle () {
         this.show = !this.show
+      },
+      childActive () {
+        this.isActive = true
+        this.show = true
       }
     },
     created: function () {
       this.isActive = this.active
-      this.$on('sidebaritem::active', () => {
-        this.isActive = true
-        this.show = true
-      })
+      this.$on('maVue::sidebar::Item::active', this.childActive)
     }
   }
 </script>
