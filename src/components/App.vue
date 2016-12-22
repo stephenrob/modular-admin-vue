@@ -29,12 +29,15 @@
         this.$root.$emit('hide::notificationsdropdown')
         this.$root.$emit('hide::profiledropdown')
         this.$root.$emit('maVue::hide::sidebar')
-        this.sidebarOpen = !this.sidebarOpen
       }
     },
     created () {
       this.$root.$on('maVue::collapseSidebar', () => {
         this.sidebarOpen = !this.sidebarOpen
+      })
+
+      this.$root.$on('maVue::hide::sidebar', () => {
+        this.sidebarOpen = false
       })
     }
   }
