@@ -48,7 +48,7 @@
     },
     created: function () {
       this.isActive = this.active
-      this.$on('maVue::sidebar::Item::active', this.childActive)
+      this.$on('maVue::sidebarItem::active', this.childActive)
     }
   }
 </script>
