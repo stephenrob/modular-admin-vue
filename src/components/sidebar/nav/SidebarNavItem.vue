@@ -35,7 +35,7 @@
     },
     created: function () {
       if (this.active) {
-        this.$parent.$emit('sidebaritem::active')
+        this.$parent.$emit('maVue::sidebarItem::active')
       }
     }
   }

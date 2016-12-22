@@ -61,14 +61,22 @@
       toggle () {
         this.show = !this.show
         if (this.show) {
-          this.$root.$emit('shown::profiledropdown')
+          this.$root.$emit('maVue::shown::profileDropdown', this)
         } else {
-          this.$root.$emit('hidden::profiledropdown')
+          this.$root.$emit('maVue::hidden::profileDropdown')
         }
       }
     },
     created: function () {
-      this.$root.$on('hide::profiledropdown', () => {
+      this.$root.$on('maVue::hide::profileDropdown', () => {
+        this.show = false
+      })
+      this.$root.$on('maVue::shown::profileDropdown', (element) => {
+        if (element !== this) {
+          this.show = false
+        }
+      })
+      this.$root.$on('maVue::shown::notificationsDropdown', () => {
         this.show = false
       })
     }

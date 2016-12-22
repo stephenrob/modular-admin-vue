@@ -36,6 +36,33 @@
           </maNotificationItem>
         </maNotificationsDropdown>
 
+        <maNotificationsDropdown
+          notificationIcon="fa-cog"
+          numberOfNotifications=10
+          allNotificationsLink="#allNotifications"
+        >
+          <maNotificationItem
+            imageURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"
+            content='<p> <span class="accent">Zack Alien</span> pushed new commit: <span class="accent">Fix page load performance issue</span>. </p>'
+            notificationLink="#"
+          >
+          </maNotificationItem>
+
+          <maNotificationItem
+            imageURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"
+            content='<p> <span class="accent">Andy Nouman</span> deployed new version of <span class="accent">NodeJS REST Api V3</span> </p>'
+            notificationLink="#"
+          >
+          </maNotificationItem>
+
+          <maNotificationItem
+            imageURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"
+            content='<p> <span class="accent">Amaya Hatsumi</span> started new task: <span class="accent">Dashboard UI design.</span>. </p>'
+            notificationLink="#"
+          >
+          </maNotificationItem>
+        </maNotificationsDropdown>
+
         <maProfileDropdown
           name=" John Doe"
           profilePictureURL="https://avatars3.githubusercontent.com/u/3959008?v=3&s=40"

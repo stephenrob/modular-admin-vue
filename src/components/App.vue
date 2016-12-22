@@ -26,8 +26,8 @@
     },
     methods: {
       bodyClick () {
-        this.$root.$emit('hide::notificationsdropdown')
-        this.$root.$emit('hide::profiledropdown')
+        this.$root.$emit('maVue::hide::notificationsDropdown')
+        this.$root.$emit('maVue::hide::profileDropdown')
         this.$root.$emit('maVue::hide::sidebar')
       }
     },
