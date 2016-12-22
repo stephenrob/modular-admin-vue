@@ -54,7 +54,7 @@
       toggle () {
         this.show = !this.show
         if (this.show) {
-          this.$root.$emit('shown::notificationsdropdown')
+          this.$root.$emit('shown::notificationsdropdown', this)
         } else {
           this.$root.$emit('hidden::notificationsdropdown')
         }
@@ -62,6 +62,14 @@
     },
     created: function () {
       this.$root.$on('hide::notificationsdropdown', () => {
+        this.show = false
+      })
+      this.$root.$on('shown::notificationsdropdown', (element) => {
+        if (element !== this) {
+          this.show = false
+        }
+      })
+      this.$root.$on('shown::profiledropdown', () => {
         this.show = false
       })
     }
