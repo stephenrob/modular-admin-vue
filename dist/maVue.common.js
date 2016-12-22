@@ -1,5 +1,5 @@
 /*!
- * maVue v0.3.2 (https://github.com/stephenrob/modular-admin-vue)
+ * maVue v0.3.3 (https://github.com/stephenrob/modular-admin-vue)
  * (c) 2016 Stephen Robinson
  * Released under the MIT License.
  */
@@ -727,7 +727,7 @@ module.exports =
 	    }
 	  },
 	  methods: {
-	    toggle: function toggle(e) {
+	    toggle: function toggle() {
 	      this.show = !this.show;
 	    }
 	  },
@@ -2104,7 +2104,7 @@ module.exports =
 	      "click": function($event) {
 	        $event.stopPropagation();
 	        $event.preventDefault();
-	        toggle(e)
+	        toggle($event)
 	      }
 	    }
 	  }, [_h('i', {
