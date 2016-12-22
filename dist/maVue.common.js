@@ -1,5 +1,5 @@
 /*!
- * maVue v0.3.1 (https://github.com/stephenrob/modular-admin-vue)
+ * maVue v0.3.2 (https://github.com/stephenrob/modular-admin-vue)
  * (c) 2016 Stephen Robinson
  * Released under the MIT License.
  */
@@ -290,7 +290,6 @@ module.exports =
 	      this.$root.$emit('hide::notificationsdropdown');
 	      this.$root.$emit('hide::profiledropdown');
 	      this.$root.$emit('maVue::hide::sidebar');
-	      this.sidebarOpen = !this.sidebarOpen;
 	    }
 	  },
 	  created: function created() {
@@ -298,6 +297,10 @@ module.exports =
 
 	    this.$root.$on('maVue::collapseSidebar', function () {
 	      _this.sidebarOpen = !_this.sidebarOpen;
+	    });
+
+	    this.$root.$on('maVue::hide::sidebar', function () {
+	      _this.sidebarOpen = false;
 	    });
 	  }
 	};
