@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/stephenrob/modular-admin-vue",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.4",
+    "bootstrap": "4.0.0-alpha.5",
     "font-awesome": "^4.7.0",
     "modular-admin-scss": "github:stephenrob/modular-admin-scss",
-    "vue": "^2.0.1"
+    "vue": "^2.2.6"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
